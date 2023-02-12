@@ -1,0 +1,147 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+//---------NAVBAR IN THE HEADER-------------
+
+.nav {
+  @include flex-display-cent;
+  padding: $margin-md $margin-xl;
+  background-color: $color-white;
+  transition: all 0.2s;
+
+  @include respond(big-desktop) {
+    padding: $margin-md $margin-xxxl;
+  }
+
+  @include respond(tab-port) {
+    display: none;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    padding: $margin-md $margin-xl;
+  }
+
+  @include respond(phone) {
+    padding: $margin-md $margin-md;
+  }
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $margin-md;
+  position: relative;
+  max-width: 100%;
+}
+
+.nav__link {
+  &:link,
+  &:visited {
+    font-family: $font-secondary;
+    font-size: 1.6rem;
+    color: $color-primary;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    list-style: none;
+    transition: all 0.3s;
+  }
+
+  &:hover,
+  &:active {
+    color: $color-secondary;
+  }
+
+  &--active {
+    color: $color-secondary;
+    background-color: $color-white--light;
+  }
+}
+
+.nav-dropdown {
+  display: flex;
+  position: absolute;
+  top: 150%;
+  z-index: 100;
+  border-bottom-left-radius: 0.4rem;
+  border-bottom-right-radius: 0.4rem;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.dropdown {
+  display: flex;
+  gap: $margin-md;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 100;
+  padding: $margin-sm;
+  border-radius: 0.3rem;
+  background-color: $color-white--light;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+
+  &:hover {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.nav-dropdown__giftboxes,
+.nav-dropdown__equipment {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-dropdown__offers,
+.nav-dropdown__contact {
+  left: 100%;
+  transform: translateX(-100%);
+}
+
+.nav-dropdown__link:link,
+.nav-dropdown__link:visited {
+  @include flex-display-cent-col;
+  gap: $margin-sm;
+  padding: 0 $margin-sm;
+  padding-top: $margin-sm;
+  font-family: $font-secondary;
+  font-size: 1.2rem;
+  color: $color-primary;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  background-color: $color-white--light;
+}
+
+.nav-dropdown__link:hover,
+.nav-dropdown__link:active {
+  color: $color-secondary;
+  background-color: $color-white--light;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.7rem 2.9rem 0rem;
+}

@@ -1,0 +1,50 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/mixins" as *;
+
+//---------HEADERS THAT START MOST SECTIONS--------
+
+.header-popup__header,
+.header-title,
+.about__header,
+.features__header,
+.slider__header,
+.products__header,
+.testimonials__header,
+.cards__header,
+.card-popup__header,
+.cta__header,
+.footer__header {
+  @include flex-display-cent;
+  gap: $margin-sm;
+}
+
+.about__header,
+.features__header,
+.slider__header,
+.products__header,
+.testimonials__header,
+.cards__header,
+.cta__header {
+  margin-bottom: $margin-lg;
+
+  @include respond(tab-port) {
+    margin-bottom: $margin-md;
+  }
+
+  @include respond(phone) {
+    margin-bottom: $margin-sm;
+  }
+}
+
+.testimonials__header {
+  @include respond(phone) {
+    gap: $margin-xs;
+  }
+}
+
+.card-popup__header {
+  padding-top: calc(3.2rem + ($margin-xs * 2));
+}

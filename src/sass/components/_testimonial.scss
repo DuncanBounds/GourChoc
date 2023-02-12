@@ -1,0 +1,33 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+//------TESTIMONIAL FROM TESTIMONIALS SECTION------
+
+.testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-sm;
+  position: relative;
+  padding: 4rem 4rem;
+  border-radius: 0.3rem;
+  color: $color-white;
+  background-color: $color-primary;
+
+  @include respond(tab-port) {
+    padding: 3.2rem 3.2rem;
+  }
+
+  &::after {
+    content: '"';
+    position: absolute;
+    top: 0;
+    left: 6.8rem;
+    font-family: $font-tertiary;
+    font-size: 14rem;
+    color: $color-secondary;
+    transform: translate(-25%, -26%);
+  }
+}

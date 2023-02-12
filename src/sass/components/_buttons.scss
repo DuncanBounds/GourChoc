@@ -1,0 +1,204 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+
+//---------------HAMBURGER BUTTON TO OPEN AND CLOSE NAV------------------
+
+.nav-hamburger__btn {
+  display: none;
+  visibility: hidden;
+  height: 4rem;
+  width: 4rem;
+  top: 1.2rem;
+  left: $margin-xl;
+  border: 0.1rem $color-white solid;
+  border-radius: 0.4rem;
+  background-color: $color-primary;
+  cursor: pointer;
+
+  @include respond(tab-port) {
+    @include flex-display-cent;
+    position: fixed;
+    z-index: 1000001;
+    visibility: visible;
+  }
+
+  @include respond(phone) {
+    left: $margin-md;
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-primary--dark;
+  }
+
+  &--fixed {
+    position: fixed;
+    z-index: 10000000;
+  }
+}
+
+//--------------BUTTON TO CLOSE HEADER AND CARD POPUPS---------------
+
+.header-popup__btn--close,
+.card-popup__btn--close {
+  @include flex-display-cent;
+  position: absolute;
+  top: $margin-sm;
+  right: $margin-sm;
+  height: 3.2rem;
+  width: 3.2rem;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.4rem;
+  color: $color-white;
+  text-transform: uppercase;
+  background-color: $color-primary;
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-primary--dark;
+  }
+}
+
+//---------------BUTTONS THAT FEATURE ON POPUPS------------------
+
+.header-popup__btn,
+.cart__btn,
+.card__btn,
+.card-popup__btn {
+  padding: $margin-sm $margin-md;
+  border: none;
+  border-radius: 0.4rem;
+  font-family: $font-primary;
+  color: $color-white;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.header-popup__btn,
+.cart__btn,
+.card-popup__btn {
+  align-self: center;
+  font-size: 1.6rem;
+}
+
+.header-popup__btn,
+.cart__btn {
+  width: 14rem;
+}
+
+.card__btn {
+  font-size: 2rem;
+
+  &--focused {
+    color: $color-primary;
+    background-color: $color-white;
+  }
+}
+
+//-------------------SEARCH INPUT BUTTON -----------------------
+
+.header__searchBtn {
+  @include flex-display-cent;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 3.5rem;
+  height: 3.5rem;
+  border: none;
+  border-left: solid 0.1rem $color-primary;
+  border-top-right-radius: 50%;
+  border-bottom-right-radius: 50%;
+  font-family: $font-primary;
+  font-size: 2rem;
+  color: $color-primary;
+  background-color: $color-white--dark;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  cursor: pointer;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+//--------------SLIDER MOVE LEFT AND RIGHT BUTTONS------------------
+
+.slides__btn {
+  @include flex-display-cent;
+  position: absolute;
+  top: 50%;
+  height: 5rem;
+  width: 5rem;
+  border: none;
+  border-radius: 50%;
+  font-family: $font-primary;
+  font-size: 2.4rem;
+  color: $color-white;
+  font-weight: bold;
+  background-color: $color-secondary;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.7rem 2.9rem 0rem;
+  transform: translateY(-50%);
+  transition: all 0.3s;
+  cursor: pointer;
+
+  &--left {
+    left: 3rem;
+
+    @include respond(phone) {
+      left: 2rem;
+    }
+  }
+
+  &--right {
+    right: 3rem;
+
+    @include respond(phone) {
+      right: 2rem;
+    }
+  }
+
+  &:hover,
+  &:active {
+    background-color: $color-secondary--dark;
+  }
+}
+
+//---------------GENERIC BUTTON COLOR STYLES ------------------
+
+.btn--gold {
+  background-color: $color-secondary;
+  color: $color-white;
+
+  &:hover,
+  &:active {
+    background-color: $color-secondary--dark;
+  }
+}
+
+.btn--brown {
+  background-color: $color-primary;
+  color: $color-white;
+
+  &:hover,
+  &:active {
+    background-color: $color-primary--dark;
+  }
+}
+
+.btn--white {
+  background-color: $color-white;
+  color: $color-primary;
+
+  &:hover,
+  &:active {
+    background-color: $color-white--dark;
+  }
+}

@@ -1,0 +1,70 @@
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+
+//-----------CARDS IN THE CARD SECTION------
+
+.card {
+  flex: 0 1 33%;
+  @include flex-display-cent-col;
+  gap: $margin-md;
+  min-width: 28rem;
+  max-width: 28rem;
+  padding: $margin-md $margin-md;
+  border-top: 1.2rem solid $color-secondary;
+  border-radius: 0.3rem;
+  text-align: center;
+  background-color: rgba($color-white, 0.6);
+
+  &--highlighted {
+    position: relative;
+    color: $color-white;
+    background-color: rgba($color-secondary--light, 0.7);
+
+    &::after {
+      content: "50% off";
+      position: absolute;
+      right: 0;
+      top: 0;
+      font-size: 1.6rem;
+      padding: $margin-sm $margin-md;
+      border-radius: 0.4rem;
+      color: $color-primary;
+      text-transform: uppercase;
+      background-color: rgba($color-white, 0.9);
+      transform: translate(30%, -75%);
+
+      @include respond(phone-sm) {
+        right: 50%;
+        transform: translate(50%, -85%);
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    gap: $margin-sm;
+  }
+}
+
+.card__details {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-md;
+
+  @include respond(tab-port) {
+    gap: $margin-sm;
+  }
+}
+
+.card__detail {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: $margin-sm;
+
+  @include respond(tab-port) {
+    gap: $margin-sm;
+  }
+}

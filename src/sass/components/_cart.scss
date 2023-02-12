@@ -1,0 +1,27 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/mixins" as *;
+
+//------CART NESTED IN CART POPUP------
+
+.cart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: $margin-sm;
+}
+
+.cart__items {
+  @include flex-display-cent-col;
+  min-height: 12rem;
+  padding: $margin-sm $margin-sm;
+  font-size: 1.6rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+}
+
+.cart__total {
+  font-size: 1.6rem;
+}

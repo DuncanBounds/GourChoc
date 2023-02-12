@@ -1,0 +1,14 @@
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+
+.footer {
+  grid-column: 1 / 13;
+  @include grid-display;
+}
+
+.footer__header,
+.footer__container {
+  grid-column: center-start / center-end;
+  padding: $margin-md $margin-xl;
+}

@@ -1,0 +1,56 @@
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+
+.header {
+  grid-column: 1 / 13;
+  @include grid-display;
+  position: relative;
+}
+
+.header-icons,
+.alert-bar,
+.header-title,
+.nav,
+.hero {
+  grid-column: 1 / 13;
+}
+
+.header-icons,
+.hero {
+  padding: $margin-md $margin-xl;
+
+  @include respond(big-desktop) {
+    padding: $margin-md $margin-xxxl;
+  }
+
+  @include respond(phone) {
+    padding: $margin-md $margin-md;
+  }
+
+  @include respond(phone-sm) {
+    padding: $margin-md $margin-sm;
+  }
+}
+
+.nav {
+  padding-bottom: $margin-sm;
+}
+
+.header-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: $margin-md;
+  padding: 0 $margin-xl;
+  padding-top: $margin-md;
+
+  @include respond(tab-port) {
+    padding: $margin-md $margin-xl;
+  }
+
+  @include respond(phone) {
+    gap: $margin-sm;
+    padding: $margin-md $margin-md;
+  }
+}

@@ -1,0 +1,171 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+//----HEADINGS ELEMENTS - H1, H2 ETC----
+
+//------LARGE SECTION HEADINGS---------
+
+.header-popup__heading,
+.header-title__heading,
+.hero__heading,
+.about__heading,
+.features__heading,
+.feature__heading,
+.slider__heading,
+.products__heading,
+.product__heading,
+.testimonials__heading,
+.cards__heading,
+.card-popup__heading,
+.cta__heading,
+.footer__heading {
+  font-family: $font-secondary;
+  text-align: center;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.header-popup__heading,
+.about__heading,
+.features__heading,
+.slider__heading,
+.products__heading,
+.testimonials__heading,
+.cards__heading,
+.cta__heading,
+.footer__heading {
+  font-size: 3.6rem;
+
+  @include respond(tab-port) {
+    font-size: 2.8rem;
+  }
+
+  @include respond(phone) {
+    font-size: 2.4rem;
+  }
+}
+
+//-----CART POPUP HEADING-----
+
+.cart__heading {
+  font-size: 1.6rem;
+}
+
+//-----ALERT BAR HEADING-----
+
+.alert-bar__heading {
+  @include flex-display-cent;
+  font-size: 1.4rem;
+  color: $color-white;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+}
+
+//-----HOMEPAGE TITLE HEADING------
+
+.header-title__heading {
+  font-size: 6.4rem;
+  letter-spacing: 0.2rem;
+
+  @include respond(tab-port) {
+    font-size: 5.4rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+
+  @include respond(phone-sm) {
+    font-size: 3.2rem;
+  }
+}
+
+//-------NAV DROPDOWN HEADINGS-----
+
+.nav-dropdown__heading {
+  padding-bottom: $margin-sm;
+  text-align: center;
+}
+
+//-----HERO SECTION HEADING-----
+
+.hero__heading {
+  font-size: 5.6rem;
+  line-height: 1.5;
+  max-width: 36rem;
+
+  @include respond(tab-port) {
+    font-size: 4.8rem;
+  }
+
+  @include respond(phone) {
+    font-size: 4rem;
+  }
+}
+
+//--------FEATURE CARD HEADING-----
+
+.feature__heading {
+  font-size: 2.4rem;
+}
+
+//----------SLIDE HEADING---------
+
+.slide__heading {
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+  }
+}
+
+//--------PRODUCT HEADING------------
+
+.product__heading {
+  @include flex-display-cent;
+  padding: $margin-md;
+  font-size: 2.4rem;
+  color: $color-primary;
+  transition: all 0.3s;
+
+  @include respond(tab-port) {
+    font-size: 2rem;
+  }
+
+  @include respond(phone) {
+    font-size: 1.6rem;
+  }
+}
+
+//-----CARD HEADINGS-----
+
+.card-popup__heading {
+  font-size: 2.4rem;
+}
+
+.card__heading {
+  font-family: $font-secondary;
+  font-size: 3.2rem;
+  color: $color-primary;
+  letter-spacing: 0.4rem;
+  text-transform: uppercase;
+
+  &--focused {
+    color: $color-white;
+  }
+}
+
+//----GENERIC HEADING COLOR STYLES-----
+
+.heading--light {
+  color: $color-white;
+}
+
+.heading--dark {
+  color: $color-primary;
+}

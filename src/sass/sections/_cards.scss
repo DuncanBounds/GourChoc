@@ -1,0 +1,31 @@
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/mixins" as *;
+
+.cards {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.9),
+      rgba($color-primary, 0.7)
+    ),
+    url(../../img/cards/cards1.jpg);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  color: $color-primary;
+}
+
+.cards__container {
+  @include flex-display-cent;
+  flex-wrap: wrap;
+  gap: $margin-xl;
+
+  @include respond(tab-port) {
+    margin-top: $margin-lg;
+  }
+
+  @include respond(phone) {
+    margin-top: 0;
+  }
+}

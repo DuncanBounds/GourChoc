@@ -1,0 +1,39 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 70vh;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.98) 33%,
+      rgba($color-primary, 0.4) 50%
+    ),
+    url(../../img/hero/hero.jpg);
+  background-position: center;
+  background-size: cover;
+
+  @include respond(big-desktop) {
+    justify-content: center;
+    background-image: linear-gradient(
+        to left,
+        rgba($color-primary, 0.9) 0%,
+        rgba($color-primary, 0.8) 100%
+      ),
+      url(../../img/hero/hero.jpg);
+  }
+
+  @include respond(tab-port) {
+    justify-content: center;
+    background-image: linear-gradient(
+        to left,
+        rgba($color-primary, 0.9) 0%,
+        rgba($color-primary, 0.8) 100%
+      ),
+      url(../../img/hero/hero.jpg);
+  }
+}

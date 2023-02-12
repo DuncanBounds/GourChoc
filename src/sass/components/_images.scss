@@ -1,0 +1,120 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+//-------NAV DROPDOWN IMAGES-------
+
+.nav-dropdown__img {
+  width: 12rem;
+  border-radius: 0.4rem;
+}
+
+//------IMAGES USED IN ABOUT SECTION------
+
+.about__imgs {
+  @include flex-display-cent;
+  gap: $margin-md;
+  width: 100%;
+
+  &-1 {
+    @include respond(tab-port) {
+      grid-row: 3 / 4;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &-2 {
+    @include respond(tab-port) {
+      grid-row: 3 / 4;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  @include respond(phone) {
+    gap: $margin-sm;
+  }
+}
+
+.about__img {
+  width: calc(50% - ($margin-md / 2));
+  border-radius: 0.4rem;
+
+  &-1,
+  &-4 {
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &-2,
+  &-3 {
+    @include respond(phone) {
+      display: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+}
+
+//-----------SLIDER IMAGES------------
+
+.slide__img {
+  width: 100%;
+  height: 75%;
+  object-fit: cover;
+}
+
+//-------PRODUCT IMAGES---------
+
+.product__img-box {
+  overflow: hidden;
+}
+
+.product__img {
+  width: 100%;
+  transition: all 0.3s;
+}
+
+//------IMAGE USED ON CARD POPUPS-------
+
+.card-popup__img {
+  display: block;
+  object-fit: cover;
+  height: 34%;
+
+  @include respond(tab-port) {
+    width: 34%;
+    height: 100%;
+  }
+
+  @include respond(phone-sm) {
+    width: 50%;
+  }
+
+  &:last-child {
+    @include respond(phone-sm) {
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+//------------TESTIMONIAL IMAGES--------------
+
+.testimonial__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8rem;
+  width: 8rem;
+  border: 0.3rem solid $color-secondary;
+  border-collapse: collapse;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  filter: grayscale(100%);
+}

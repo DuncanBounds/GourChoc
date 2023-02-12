@@ -1,0 +1,60 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+//-------------------SEARCH BAR IN THE HEADER----------------
+
+.header__search {
+  display: flex;
+  justify-content: end;
+  position: absolute;
+  right: calc($margin-xl + $margin-xs + 2.8rem);
+  width: 100%;
+  opacity: 1;
+  visibility: hidden;
+  transition: all 0.3s;
+
+  &--active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @include respond(phone) {
+    right: calc($margin-md + $margin-xs + 2.8rem);
+  }
+}
+
+.header__searchInput {
+  display: flex;
+  justify-content: end;
+  width: 0;
+  padding: $margin-sm $margin-md;
+  border: none;
+  border-radius: 100rem;
+  background-color: $color-white--dark;
+  color: $color-primary;
+  font-size: 1.4rem;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s;
+
+  &::placeholder {
+    color: $color-primary;
+    font-family: $font-primary;
+  }
+
+  &:focus {
+    outline: 0.2rem solid $color-secondary;
+  }
+
+  &--active {
+    width: 25rem;
+    opacity: 1;
+    visibility: visible;
+
+    @include respond(phone-sm) {
+      width: 20rem;
+    }
+  }
+}

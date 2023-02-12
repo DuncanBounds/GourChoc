@@ -1,0 +1,52 @@
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+
+.main {
+  grid-column: 1 / 13;
+  @include grid-display;
+}
+
+.about,
+.features,
+.slider,
+.products,
+.testimonials,
+.cards,
+.cta {
+  grid-column: 1 / 13;
+  padding: $margin-lg $margin-xl;
+}
+
+.about,
+.features,
+.slider,
+.products,
+.cards,
+.cta {
+  @include respond(big-desktop) {
+    padding: $margin-lg $margin-xxxl;
+  }
+
+  @include respond(tab-port) {
+    padding: $margin-md $margin-xl;
+  }
+
+  @include respond(phone) {
+    padding: $margin-md $margin-md;
+  }
+
+  @include respond(phone-sm) {
+    padding: $margin-md $margin-sm;
+  }
+}
+
+.testimonials {
+  @include respond(phone) {
+    padding: $margin-md $margin-lg;
+  }
+
+  @include respond(phone-sm) {
+    padding: $margin-md $margin-lg;
+  }
+}

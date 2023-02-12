@@ -1,0 +1,41 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/margins" as *;
+
+//-----CONTAINER FOR CLICKABLE ICONS TO SIGN-IN/CART/SEARCH----
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: fixed;
+  z-index: 100000;
+  height: 6.4rem;
+  width: 100%;
+  padding: $margin-md $margin-xl;
+  background-color: $color-primary;
+
+  @include respond(tab-port) {
+    justify-content: space-between;
+  }
+
+  @include respond(big-desktop) {
+    padding: $margin-md $margin-xxxl;
+  }
+
+  @include respond(phone) {
+    padding: $margin-md $margin-md;
+  }
+
+  @include respond(phone-sm) {
+    padding: $margin-md $margin-sm;
+  }
+}
+
+.header-icons__container {
+  flex: 0 1 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: $margin-sm;
+}

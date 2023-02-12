@@ -1,0 +1,19 @@
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+.testimonials__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  column-gap: $margin-xl;
+  row-gap: $margin-xl;
+  margin-top: $margin-md;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(auto-fit, minmax(32rem, 1fr));
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    margin-top: $margin-xl;
+  }
+}

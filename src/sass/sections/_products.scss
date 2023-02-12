@@ -1,0 +1,16 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+.products {
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary, 0.85) 50%,
+      rgba($color-secondary, 0.8)
+    ),
+    url(../../img/products/products_background.jpg);
+  background-position: center;
+  background-size: cover;
+}

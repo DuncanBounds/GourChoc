@@ -1,0 +1,20 @@
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/margins" as *;
+
+.about__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: $margin-lg;
+  row-gap: $margin-lg;
+
+  @include respond(tab-port) {
+    row-gap: $margin-md;
+    column-gap: $margin-md;
+  }
+
+  @include respond(phone) {
+    row-gap: $margin-sm;
+    column-gap: $margin-sm;
+  }
+}

@@ -1,0 +1,13 @@
+@use "../abstracts/breakpointMap" as *;
+
+.cta__container {
+  width: 100%;
+  background-image: url(../../img/cta/cta1.jpg);
+  background-size: cover;
+  background-position: center;
+  box-shadow: rgba(100, 100, 111, 0.3) 0rem 0.7rem 2.9rem 0rem;
+
+  @include respond(tab-port) {
+    background-image: url(../../img/cta/cta2.jpg);
+  }
+}

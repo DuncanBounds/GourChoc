@@ -1,0 +1,26 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+//--------PRODUCT FROM PRODUCT SECTION----------
+
+.product {
+  width: 100%;
+  border-radius: 0.4rem;
+  background-color: $color-white;
+  overflow: hidden;
+  box-shadow: rgba(100, 100, 111, 0.2) 0rem 0.7rem 2.9rem 0rem;
+  transition: all 0.3s;
+
+  &:hover &__heading {
+    color: $color-secondary;
+    cursor: pointer;
+  }
+
+  &:hover &__img {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+}

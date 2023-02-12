@@ -1,0 +1,22 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+.products__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  column-gap: $margin-lg;
+  row-gap: $margin-lg;
+
+  @include respond(tab-port) {
+    grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+    column-gap: $margin-md;
+    row-gap: $margin-md;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  }
+}

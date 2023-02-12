@@ -1,0 +1,218 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/breakpointMap" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/mixins" as *;
+
+//---------------SIGN IN/SIGN UP HEADER POPUP FORM-----------------
+
+.header-popup__form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: $margin-sm;
+  width: 100%;
+}
+
+.header-popup__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-xs;
+  width: 100%;
+}
+
+.header-popup__label {
+  font-size: 1.6rem;
+}
+
+.header-popup__input {
+  width: 100%;
+  padding: $margin-sm;
+  font-family: $font-primary;
+  background-color: $color-white;
+  border-radius: 0.4rem;
+
+  &::placeholder {
+    font-size: 1.6rem;
+  }
+}
+
+//------------------CTA SIGN UP FORM-----------------------
+
+.cta-form {
+  width: 55%;
+  background-color: rgba($color-white, 0.7);
+  clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
+
+  @include respond(tab-land) {
+    width: 75%;
+  }
+
+  @include respond(tab-port) {
+    width: 100%;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+.cta-form__heading {
+  padding: 0 $margin-md;
+  padding-top: $margin-lg;
+  font-family: $font-secondary;
+  font-size: 2.6rem;
+  color: $color-secondary;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include respond(tab-port) {
+    font-size: 2.4rem;
+  }
+
+  @include respond(phone) {
+    padding-top: $margin-md;
+  }
+
+  @include respond(phone-sm) {
+    font-size: 2rem;
+  }
+}
+
+.cta-form__items {
+  @include flex-display-cent-col;
+  gap: $margin-lg;
+  width: 100%;
+  padding: $margin-lg;
+
+  @include respond(tab-land) {
+    gap: $margin-md;
+    padding: $margin-md;
+  }
+}
+
+.cta-form__group {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-sm;
+  width: 50%;
+
+  @include respond(tab-port) {
+    width: 60%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.cta-form__input {
+  width: 100%;
+  padding: $margin-sm $margin-sm;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0.3rem;
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  transition: all 0.3s;
+
+  &::placeholder {
+    font-size: 1.4rem;
+  }
+
+  &:focus {
+    border-bottom: 0.3rem solid green;
+    outline: none;
+    box-shadow: rgba(100, 100, 111, 0.1) 0rem 0.7rem 2.9rem 0rem;
+  }
+
+  &:focus:invalid {
+    border-bottom: 0.3rem solid red;
+  }
+}
+
+.cta-form__group-radio {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-md;
+  width: 50%;
+
+  @include respond(tab-port) {
+    width: 60%;
+  }
+
+  @include respond(phone) {
+    width: 100%;
+  }
+}
+
+.cta-form__radio-group {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $margin-sm;
+  font-family: $font-primary;
+  font-size: 1.4rem;
+  color: $color-primary;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.cta-form__radio-input {
+  display: none;
+}
+
+.cta-form__radio-label {
+  position: relative;
+  padding-left: 4.5rem;
+  cursor: pointer;
+}
+
+.cta-form__radio-btn {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.5rem;
+  height: 3rem;
+  width: 3rem;
+  border: 0.3rem solid $color-primary;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 1.3rem;
+    width: 1.3rem;
+    border-radius: 50%;
+    background-color: $color-primary;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.2s;
+  }
+}
+
+.cta-form__btn {
+  padding: $margin-sm $margin-md;
+  border: none;
+  border-radius: 0.3rem;
+  font-family: $font-primary;
+  font-size: 2rem;
+  color: $color-white;
+  text-transform: uppercase;
+  background-color: $color-secondary;
+  transition: all 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: $color-secondary--dark;
+    cursor: pointer;
+  }
+}
+
+.cta-form__radio-input:checked
+  ~ .cta-form__radio-label
+  .cta-form__radio-btn::after {
+  opacity: 1;
+}

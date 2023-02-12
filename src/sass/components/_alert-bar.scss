@@ -1,0 +1,10 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/margins" as *;
+
+//------ALERT BAR AD IN THE HEADER------
+
+.alert-bar {
+  margin-top: 6.4rem;
+  padding: $margin-xs 0;
+  background-color: $color-secondary;
+}

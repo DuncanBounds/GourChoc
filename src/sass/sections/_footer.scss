@@ -1,0 +1,110 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts//breakpointMap" as *;
+
+.footer {
+  background-color: $color-primary;
+}
+
+.footer__container {
+  display: flex;
+  gap: $margin-lg;
+  position: relative;
+  padding: $margin-lg $margin-md;
+  border-top: solid 0.2rem $color-white;
+  border-bottom: solid 0.2rem $color-white;
+  color: $color-white;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    padding: 0 0;
+  }
+}
+
+.footer__content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: $margin-xl;
+  flex: 0 1 100%;
+
+  color: $color-white;
+
+  @include respond(tab-land) {
+    justify-content: space-between;
+    gap: $margin-md;
+  }
+
+  @include respond(tab-port) {
+    justify-content: center;
+    gap: $margin-xl;
+    padding: $margin-sm;
+  }
+
+  @include respond(phone) {
+    gap: $margin-sm;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    height: calc(100% - ($margin-lg * 1));
+    width: 0.2rem;
+    background-color: $color-white;
+
+    @include respond(tab-port) {
+      width: 100%;
+      height: 0.2rem;
+      top: calc(50% + $margin-sm + ($margin-lg / 2));
+      left: 0;
+    }
+  }
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  gap: $margin-sm;
+}
+
+.footer__category {
+  padding-bottom: $margin-xs;
+  border-bottom: solid 0.2rem $color-white;
+  font-family: $font-secondary;
+  font-size: 1.4rem;
+  letter-spacing: 0.3rem;
+}
+
+.footer__link {
+  display: flex;
+  align-items: center;
+  gap: $margin-sm;
+  font-family: $font-primary;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.footer__copyright {
+  display: flex;
+  align-items: center;
+  width: 100%;
+
+  @include respond(tab-port) {
+    justify-content: center;
+    border-left: none;
+  }
+}
+
+.footer__copyright-text {
+  padding: 0 $margin-md;
+  font-size: 1.2rem;
+  text-align: center;
+  line-height: 1.6;
+
+  @include respond(tab-port) {
+    padding: $margin-sm;
+  }
+}

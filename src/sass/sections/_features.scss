@@ -1,0 +1,34 @@
+@use "../abstracts/colors" as *;
+@use "../abstracts/typography" as *;
+@use "../abstracts/margins" as *;
+@use "../abstracts/mixins" as *;
+@use "../abstracts/breakpointMap" as *;
+
+.features {
+  @include flex-display-cent-col;
+  background-image: linear-gradient(
+      to right,
+      rgba($color-secondary, 0.8),
+      rgba($color-primary, 0.8) 50%
+    ),
+    url(../../img/features/features.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+.features__container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: $margin-xl;
+
+  @include respond(tab-land) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, min-content);
+    row-gap: $margin-xl;
+  }
+
+  @include respond(phone) {
+    grid-template-columns: 1fr;
+    row-gap: $margin-md;
+  }
+}
