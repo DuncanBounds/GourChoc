@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Poppins:wght@300;400;500;600;700&family=Proza+Libre&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" href="img/browserLogo.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="index.js" defer></script>
+
+    <title>Gourchoc homepage</title>
+  </head>
+
+  <body>
+    <!-- ------------HEADER------------ -->
+
+    <header class="header">
+      <!--------------------HAMBURGER NAV BUTTON--------------->
+      <button class="nav-hamburger__btn">
+        <svg
+          class="nav-hamburger__icon nav-hamburger__icon--active"
+          data-icon="1"
+        >
+          <use href="img/nav-sprite.svg#hamburger"></use>
+        </svg>
+        <svg
+          class="nav-hamburger__icon nav-hamburger__icon--inactive"
+          data-icon="1"
+        >
+          <use href="img/nav-sprite.svg#close"></use>
+        </svg>
+      </button>
+
+      <!-------------------HEADER POPUPS----------------------->
+
+      <!--ABSOLUTE POSITIONING-->
+
+      <article class="header-popups__container">
+        <article class="header-popup header-popup-1" id="nav-popup--login">
+          <button class="header-popup__btn--close" data-btn="1">
+            <p>X</p>
+          </button>
+
+          <article class="header-popup__header">
+            <svg class="header-popup__icon icon--dark">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+            <h2 class="header-popup__heading">Sign-in</h2>
+            <svg class="header-popup__icon icon--right icon--dark">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+          </article>
+
+          <form action="#" class="header-popup__form">
+            <article class="header-popup__form-group">
+              <label class="header-popup__label" for="email-signin"
+                >Your email address:</label
+              >
+              <input
+                id="email-signin"
+                type="email"
+                class="header-popup__input"
+                placeholder="chocolate@choc.com"
+              />
+            </article>
+
+            <article class="header-popup__form-group">
+              <label class="header-popup__label" for="password-signin"
+                >Your password:</label
+              >
+              <input
+                id="password-signin"
+                type="password"
+                class="header-popup__input"
+                placeholder="Your password"
+              />
+            </article>
+            <button class="header-popup__btn btn--brown">Sign-in</button>
+
+            <article class="header-popup__form-group">
+              <p class="header-popup__text">Sign up now!</p>
+              <button class="header-popup__btn btn--gold">Join now</button>
+            </article>
+          </form>
+        </article>
+
+        <article class="header-popup header-popup-2" id="nav-popup--cart">
+          <button class="header-popup__btn--close" data-btn="2">
+            <p>X</p>
+          </button>
+
+          <article class="header-popup__header">
+            <svg class="header-popup__icon">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+            <h2 class="header-popup__heading">Your cart</h2>
+            <svg class="header-popup__icon icon--right">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+          </article>
+
+          <article class="cart">
+            <h2 class="cart__heading">Your items:</h2>
+            <div class="cart__items">Your cart is currently empty.</div>
+            <div class="cart__total">
+              <h4 class="cart__totalHeading">Total:</h4>
+              <h4 class="cart__totalCost">$--</h4>
+            </div>
+
+            <button class="cart__btn btn--gold">Check out</button>
+          </article>
+        </article>
+      </article>
+
+      <!-- -----------HAMBURGER NAVIGATION----------------->
+
+      <!--ABSOLUTE POSITIONING-->
+
+      <nav class="nav-hamburger">
+        <ul class="nav-hamburger__list">
+          <li class="nav-hamburger__item">
+            <a href="#" class="nav-hamburger__link"
+              >About us
+
+              <svg class="nav-hamburger__list-icon" data-icon="1">
+                <use href="img/arrow-sprite.svg#down-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="nav-hamburger__sublist">
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Our company</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">What we offer</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Our staff</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-hamburger__item">
+            <a href="#" class="nav-hamburger__link"
+              >Chocolates
+
+              <svg class="nav-hamburger__list-icon" data-icon="1">
+                <use href="img/arrow-sprite.svg#down-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="nav-hamburger__sublist">
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Chocolate bars</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Selections</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Hot chocolate</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Truffles</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Sweet treats</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-hamburger__item">
+            <a href="#" class="nav-hamburger__link"
+              >Gift boxes
+
+              <svg class="nav-hamburger__list-icon" data-icon="1">
+                <use href="img/arrow-sprite.svg#down-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="nav-hamburger__sublist">
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Selections</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Seasonal</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Specialities</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Couples</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Cookies</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-hamburger__item">
+            <a href="#" class="nav-hamburger__link"
+              >Equipment
+
+              <svg class="nav-hamburger__list-icon" data-icon="1">
+                <use href="img/arrow-sprite.svg#down-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="nav-hamburger__sublist">
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Baking</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Recipe books</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Mixers</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-hamburger__item">
+            <a href="#" class="nav-hamburger__link"
+              >Special offers
+
+              <svg class="nav-hamburger__list-icon" data-icon="1">
+                <use href="img/arrow-sprite.svg#down-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="nav-hamburger__sublist">
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Chocolate</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Gift boxes</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Equipment</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-hamburger__item">
+            <a href="#" class="nav-hamburger__link"
+              >Contact us
+
+              <svg class="nav-hamburger__list-icon" data-icon="1">
+                <use href="img/arrow-sprite.svg#down-arrow"></use>
+              </svg>
+            </a>
+
+            <ul class="nav-hamburger__sublist">
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Email us</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Call us</a>
+              </li>
+
+              <li class="nav-hamburger__subitem">
+                <a href="#" class="nav-hamburger__sublink">Visit us</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <!-------------HEADER ICONS BAR ----------------->
+
+      <article class="header-icons">
+        <article class="header-icons__container">
+          <svg
+            class="header__icon icon--light"
+            id="header__icon--acount"
+            data-icon="1"
+          >
+            <use href="img/icon-sprite.svg#user"></use>
+          </svg>
+
+          <svg
+            class="header__icon icon--light"
+            id="header__icon--cart"
+            data-icon="2"
+          >
+            <use href="img/icon-sprite.svg#shopping-cart"></use>
+          </svg>
+
+          <svg
+            class="header__icon--search icon--light"
+            id="header__icon--search"
+          >
+            <use href="img/icon-sprite.svg#search"></use>
+          </svg>
+
+          <form action="#" class="header__search">
+            <input
+              type="text"
+              class="header__searchInput"
+              placeholder="E.g, truffles"
+            />
+            <button class="header__searchBtn">X</button>
+          </form>
+        </article>
+      </article>
+
+      <!------------- ALERT BAR----------------->
+
+      <!--   (PUT THE ALERT BAR IN THE HEADER ICONS SECTION?) -->
+
+      <article class="alert-bar">
+        <h3 class="alert-bar__heading">
+          <span class="alert-bar__text">50% discount&nbsp;</span> on products
+          this month
+        </h3>
+      </article>
+
+      <!-- ----------- HEADER PAGE TITLE ----------------->
+
+      <article class="header-title">
+        <svg class="heading__icon icon--dark">
+          <use href="img/icon-sprite.svg#cocoa"></use>
+        </svg>
+        <h1 class="header-title__heading heading--dark">GOURCHOC</h1>
+        <svg class="heading__icon icon--right icon--dark">
+          <use href="img/icon-sprite.svg#cocoa"></use>
+        </svg>
+      </article>
+
+      <!---------------NAVIGATION----------------->
+
+      <nav class="nav">
+        <ul class="nav__list">
+          <a href="#" class="nav__link" data-link="1">
+            <li class="nav__item">About us</li>
+          </a>
+          <a href="#" class="nav__link" data-link="2">
+            <li class="nav__item">Chocolates</li>
+          </a>
+          <a href="#" class="nav__link" data-link="3">
+            <li class="nav__item">Gift boxes</li>
+          </a>
+          <a href="#" class="nav__link" data-link="4">
+            <li class="nav__item">Equipment</li>
+          </a>
+          <a href="#" class="nav__link" data-link="5">
+            <li class="nav__item">Special offers</li>
+          </a>
+          <a href="#" class="nav__link" data-link="6">
+            <li class="nav__item">Contact us</li>
+          </a>
+
+          <article class="nav-dropdown nav-dropdown__1">
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-about1-lazy.jpg"
+                alt="A cocoa farmer"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">Our company</h3>
+            </a>
+
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-about2-lazy.jpg"
+                alt="Some chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">What we offer</h3>
+            </a>
+
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-about3-lazy.jpg"
+                alt="A chocolate chef"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">Our staff</h3>
+            </a>
+          </article>
+
+          <article class="nav-dropdown nav-dropdown__2">
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-products1-lazy.jpg"
+                alt="A bar of chocolate"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">Chocolate bars</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-products2-lazy.jpg"
+                alt="A box of chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">selections</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-products3-lazy.jpg"
+                alt="A mug of hot chocolate"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">Hot chocolate</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-products4-lazy.jpg"
+                alt="Some chocolate truffles"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">truffles</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-products5-lazy.jpg"
+                alt="Some biscuits"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">sweet treats</h3>
+            </a>
+          </article>
+
+          <article class="nav-dropdown nav-dropdown__3 nav-dropdown__giftboxes">
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-giftbox1-lazy.jpg"
+                alt="A box of chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">selections</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-giftbox2-lazy.jpg"
+                alt="A giftbox"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">seasonal</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-giftbox3-lazy.jpg"
+                alt="A small box of chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">specialities</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-giftbox4-lazy.jpg"
+                alt="A small box of chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">couples</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-giftbox5-lazy.jpg"
+                alt="A small box of biscuits"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">cookies</h3>
+            </a>
+          </article>
+
+          <article class="nav-dropdown nav-dropdown__4 nav-dropdown__equipment">
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-equipment1-lazy.jpg"
+                alt="A baking tray of cakes"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">baking</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-equipment2-lazy.jpg"
+                alt="A recipe book"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">recipe books</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-equipment3-lazy.jpg"
+                alt="A mug of hot chocolate"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">mixers</h3>
+            </a>
+          </article>
+
+          <article class="nav-dropdown nav-dropdown__5 nav-dropdown__offers">
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-products1-lazy.jpg"
+                alt="A bar of chocolate"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">chocolates</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-giftbox1-lazy.jpg"
+                alt="A large box of chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">gift boxes</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-equipment1-lazy.jpg"
+                alt="A baking tray of cakes"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">equipment</h3>
+            </a>
+          </article>
+
+          <article class="nav-dropdown nav-dropdown__6 nav-dropdown__contact">
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-contact1-lazy.jpg"
+                alt="A laptop"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">email us</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-contact2-lazy.jpg"
+                alt="A telephone"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">call us</h3>
+            </a>
+            <a href="#" class="nav-dropdown__link">
+              <img
+                src="img/nav/nav-contact3-lazy.jpg"
+                alt="A shop selling chocolates"
+                class="nav-dropdown__img"
+                loading="lazy"
+              />
+              <h3 class="nav-dropdown__heading">visit us</h3>
+            </a>
+          </article>
+        </ul>
+      </nav>
+
+      <!-------------HERO SECTION ----------------->
+
+      <article class="hero">
+        <h2 class="hero__heading heading--light">
+          The home of delicious, gourmet chocolate
+        </h2>
+      </article>
+    </header>
+
+    <!--/////////////////////////////////////////////////////////-->
+
+    <main class="main">
+      <!---------------------ABOUT---------------------->
+
+      <article class="about">
+        <article class="about__header">
+          <svg class="about__icon icon--dark">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h2 class="about__heading heading--dark">About us</h2>
+          <svg class="about__icon icon--dark icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="about__grid">
+          <article class="about__imgs about__imgs-1">
+            <img
+              src="img/about/about1-lg.jpg"
+              srcset="img/about/about1-lazy.jpeg 300w"
+              data-srcset="img/about/about1-lg.jpg 900w, img/about/about1-md.jpg 600w"
+              sizes="(min-width: 1200px) 900px, 600px"
+              alt="Some cocoa pods"
+              class="about__img about__img-1 img__lazy"
+              loading="lazy"
+            />
+            <img
+              src="img/about/about2-lg.jpg"
+              srcset="img/about/about2-lazy.jpeg 300w"
+              data-src="img/about/about2-lg.jpg 900w, img/about/about2-md.jpg 600w"
+              sizes="(min-width: 1200px) 900px, 600px"
+              alt="Some cocoa beans"
+              class="about__img about__img-2 img__lazy"
+              loading="lazy"
+            />
+          </article>
+
+          <p class="about__text about__text-1">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero,
+            harum. Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+            Adipisci vel recusandae atque. Omnis perspiciatis voluptas, ex
+            tempora consequuntur accusantium aperiam consectetur dicta aliquid
+            nostrum a alias est neque unde ab?
+          </p>
+
+          <p class="about__text about__text-2">
+            Lorem ipsum, iusto laboriosam quasi, atque placeat magnam recusandae
+            ut qui, dignissimos tenetur aliquid voluptatem. Lorem, ipsum dolor
+            sit amet consectetur adipisicing elit. Soluta veritatis a sint
+            corrupti sed obcaecati dolore dicta, illo quidem perferendis
+            cupiditate corporis ab suscipit delectus aliquid, nisi ullam et
+            placeat.
+          </p>
+
+          <div class="about__imgs about__imgs-2">
+            <img
+              src="img/about/about3-lg.jpg"
+              srcset="img/about/about3-lazy.jpeg 300w"
+              data-src="img/about/about3-lg.jpg 900w, img/about/about3-md.jpg 600w"
+              sizes="(min-width: 1200px) 900px, 600px"
+              alt="A bowl of ingredients"
+              class="about__img about__img-3 img__lazy"
+              loading="lazy"
+            />
+            <img
+              src="img/about/about4-lg.jpg"
+              srcset="img/about/about4-lazy.jpeg 300w"
+              data-src="img/about/about4-lg.jpg 900w, img/about/about4-md.jpg 600w"
+              sizes="(min-width: 1200px) 900px, 600px"
+              alt="Some dark chocolate"
+              class="about__img about__img-4 img__lazy"
+              loading="lazy"
+            />
+          </div>
+        </article>
+      </article>
+
+      <!---------------------FEATURES---------------------->
+
+      <article class="features">
+        <article class="features__header">
+          <svg class="features__icon icon--light">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h2 class="features__heading heading--light">What we offer</h2>
+          <svg class="features__icon icon--light icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="features__container">
+          <article class="feature">
+            <h3 class="feature__heading">High quality</h3>
+            <svg class="feature__icon icon--dark">
+              <use href="img/icon-sprite.svg#quality"></use>
+            </svg>
+            <p class="feature__text">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt est
+              quos, officiis harum
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature__heading">Fair trade</h3>
+            <svg class="feature__icon icon--dark">
+              <use href="img/icon-sprite.svg#fair-trade"></use>
+            </svg>
+            <p class="feature__text">
+              Lorem nostrum laboriosam temporibus repellat qui labore sed rerum
+              unde, eius
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature__heading">Sustainable</h3>
+            <svg class="feature__icon icon--dark">
+              <use href="img/icon-sprite.svg#growth"></use>
+            </svg>
+            <p class="feature__text">
+              Lorem ipsum possimus. Soluta nesciunt maxime et. Lorem ipsum dolor
+              sit amet consectetur
+            </p>
+          </article>
+
+          <article class="feature">
+            <h3 class="feature__heading">Fast delivery</h3>
+            <svg class="feature__icon icon--dark">
+              <use href="img/icon-sprite.svg#delivery"></use>
+            </svg>
+            <p class="feature__text">
+              Lorem iearum exercitationem necessitatibus totam, iusto expedita
+              impe explicabo consequuntur!
+            </p>
+          </article>
+        </article>
+      </article>
+
+      <!---------------------SLIDER---------------------->
+
+      <article class="slider">
+        <article class="slider__header">
+          <svg class="slider__icon icon--dark">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h2 class="slider__heading heading--dark">Our best sellers</h2>
+          <svg class="slider__icon icon--dark icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="slides__container">
+          <article class="slides">
+            <article class="slide slide--1">
+              <img
+                src="img/slider/slider1-xl.jpg"
+                srcset="img/slider/slider1-lazy.jpg 300w"
+                data-src="img/slider/slider1-xl.jpg 1600w, img/slider/slider1-lg.jpg 1500w, img/slider/slider1-md.jpg 1000w"
+                sizes="(min-width: 900px) 1600px, (min-width: 600px) 1500px, 1000w"
+                alt="Some chocolate"
+                class="slide__img img__lazy"
+                loading="lazy"
+              />
+              <div class="slide__text">
+                <h3 class="slide__heading">Dark chocolate with almonds 250g</h3>
+                <p class="slide__price">£7.99</p>
+              </div>
+            </article>
+
+            <article class="slide slide--2">
+              <img
+                src="img/slider/slider2-xl.jpg"
+                srcset="img/slider/slider2-lazy.jpg 300w"
+                data-src="img/slider/slider2-xl.jpg 1600w, img/slider/slider2-lg.jpg 1500w, img/slider/slider2-md.jpg 1000w"
+                sizes="(min-width: 900px) 1600px, (min-width: 600px) 1500px, 1000w"
+                alt="Some chocolate"
+                class="slide__img img__lazy"
+                loading="lazy"
+              />
+              <div class="slide__text">
+                <h3 class="slide__heading">Milk chocolate selection</h3>
+                <p class="slide__price">£19.99</p>
+              </div>
+            </article>
+
+            <article class="slide slide--3">
+              <img
+                src="img/slider/slider3-xl.jpg"
+                srcset="img/slider/slider3-lazy.jpg 300w"
+                data-src="img/slider/slider3-xl.jpg 1600w, img/slider/slider3-lg.jpg 1500w, img/slider/slider3-md.jpg 1000w"
+                sizes="(min-width: 900px) 1600px, (min-width: 600px) 1500px, 1000w"
+                alt="Some chocolate"
+                class="slide__img img__lazy"
+                loading="lazy"
+              />
+              <div class="slide__text">
+                <h3 class="slide__heading">Truffle selection</h3>
+                <p class="slide__price">£9.99</p>
+              </div>
+            </article>
+
+            <article class="slide slide--4">
+              <img
+                src="img/slider/slider4-xl.jpg"
+                srcset="img/slider/slider4-lazy.jpg 300w"
+                data-src="img/slider/slider4-xl.jpg 1600w, img/slider/slider4-lg.jpg 1500w, img/slider/slider4-md.jpg 1000w"
+                sizes="(min-width: 900px) 1600px, (min-width: 600px) 1500px, 1000w"
+                alt="Some chocolate"
+                class="slide__img img__lazy"
+                loading="lazy"
+              />
+              <div class="slide__text">
+                <h3 class="slide__heading">
+                  Dark chocolate raspberry creams 250g
+                </h3>
+                <p class="slide__price">£7.99</p>
+              </div>
+            </article>
+
+            <article class="slide slide--5">
+              <img
+                src="img/slider/slider5-xl.jpg"
+                srcset="img/slider/slider5-lazy.jpg 300w"
+                data-src="img/slider/slider5-xl.jpg 1600w, img/slider/slider5-lg.jpg 1500w, img/slider/slider5-md.jpg 1000w"
+                sizes="(min-width: 900px) 1600px, (min-width: 600px) 1500px, 1000w"
+                alt="Some chocolate"
+                class="slide__img img__lazy"
+                loading="lazy"
+              />
+              <div class="slide__text">
+                <h3 class="slide__heading">Luxury nougat selection</h3>
+                <p class="slide__price">£8.99</p>
+              </div>
+            </article>
+
+            <button class="slides__btn slides__btn--left">&larr;</button>
+            <button class="slides__btn slides__btn--right">&rarr;</button>
+          </article>
+          <article class="dots"></article>
+        </article>
+      </article>
+
+      <!------------------PRODUCTS FOR SALE-------------------->
+
+      <article class="products">
+        <article class="products__header">
+          <svg class="products__icon icon--light">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h2 class="products__heading heading--light">Our gourmet range</h2>
+          <svg class="products__icon icon--light icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="products__container">
+          <article class="product">
+            <article class="product__img-box">
+              <img
+                src="img/products/products1-lg.jpg"
+                srcset="img/products/products1-lazy.jpg 300w"
+                data-src="img/products/products1-lg.jpg 1050w, img/products/products1-md.jpg 750w"
+                sizes="(min-width: 900px) 1050px, 750px"
+                alt="A bar of chocolate"
+                class="product__img img__lazy"
+                loading="lazy"
+              />
+            </article>
+            <h3 class="product__heading">Bars of chocolate</h3>
+          </article>
+
+          <article class="product">
+            <article class="product__img-box">
+              <img
+                src="img/products/products3-lg.jpg"
+                srcset="img/products/products3-lazy.jpg 300w"
+                data-src="img/products/products3-lg.jpg 1050w, img/products/products3-md.jpg 750w"
+                sizes="(min-width: 900px) 1050px, 750px"
+                alt="A cup of hot chocolate"
+                class="product__img img__lazy"
+                loading="lazy"
+              />
+            </article>
+            <h3 class="product__heading">Hot chocolate</h3>
+          </article>
+
+          <article class="product">
+            <article class="product__img-box">
+              <img
+                src="img/products/products2-lg.jpg"
+                srcset="img/products/products2-lazy.jpg 300w"
+                data-src="img/products/products2-lg.jpg 1050w, img/products/products2-md.jpg 750w"
+                sizes="(min-width: 900px) 1050px, 750px"
+                alt="A box of chocolates"
+                class="product__img img__lazy"
+                loading="lazy"
+              />
+            </article>
+            <h3 class="product__heading">Gift boxes</h3>
+          </article>
+
+          <article class="product">
+            <article class="product__img-box">
+              <img
+                src="img/products/products4-lg.jpg"
+                srcset="img/products/products4-lazy.jpg 300w"
+                data-src="img/products/products4-lg.jpg 1050w, img/products/products4-md.jpg 750w"
+                sizes="(min-width: 900px) 1050px, 750px"
+                alt="Some chocolate truffles"
+                class="product__img img__lazy"
+                loading="lazy"
+              />
+            </article>
+            <h3 class="product__heading">Truffles</h3>
+          </article>
+
+          <article class="product">
+            <article class="product__img-box">
+              <img
+                src="img/products/products5-lg.jpg"
+                srcset="img/products/products5-lazy.jpg 300w"
+                data-src="img/products/products5-lg.jpg 1050w, img/products/products5-md.jpg 750w"
+                sizes="(min-width: 900px) 1050px, 750px"
+                alt="Some cookies"
+                class="product__img img__lazy"
+                loading="lazy"
+              />
+            </article>
+            <h3 class="product__heading">Cookies</h3>
+          </article>
+
+          <article class="product">
+            <article class="product__img-box">
+              <img
+                src="img/products/6-lg.jpg"
+                srcset="img/products/products6-lazy.jpg 300w"
+                data-src="img/products/products6-lg.jpg 1050w, img/products/products6-md.jpg 750w"
+                sizes="(min-width: 900px) 1050px, 750px"
+                alt="Some baking equipment"
+                class="product__img img__lazy"
+                loading="lazy"
+              />
+            </article>
+            <h3 class="product__heading">Equipment</h3>
+          </article>
+        </article>
+      </article>
+
+      <!------------------ TESTIMONIALS -------------------->
+
+      <article class="testimonials">
+        <article class="testimonials__header">
+          <svg class="testimonials__icon icon--dark">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h2 class="testimonials__heading heading--dark">
+            What our customers say
+          </h2>
+          <svg class="testimonials__icon icon--dark icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="testimonials__container">
+          <article class="testimonial">
+            <img
+              src="img/testimonials/testimonial1.jpg"
+              alt="A profile picture"
+              class="testimonial__img"
+              loading="lazy"
+            />
+            <p class="testimonial__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+              aliquid a magnam amet, praesentium illo voluptatem deleniti
+              dignissimos dolor?
+            </p>
+            <h3 class="testimonial__name">Doña Heladio</h3>
+            <h4 class="testimonial__date">3 days ago</h4>
+          </article>
+
+          <article class="testimonial">
+            <img
+              src="img/testimonials/testimonial2.jpg"
+              alt="A profile picture"
+              class="testimonial__img"
+              loading="lazy"
+            />
+            <p class="testimonial__text">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem
+              quis eligendi, iste iusto omnis, exercitationem. Lorem sit amet
+              consectetur.
+            </p>
+            <h3 class="testimonial__name">Ignacio Vargus</h3>
+            <h4 class="testimonial__date">1 week ago</h4>
+          </article>
+
+          <article class="testimonial">
+            <img
+              src="img/testimonials/testimonial3.jpg"
+              alt="A profile picture"
+              class="testimonial__img"
+              loading="lazy"
+            />
+            <p class="testimonial__text">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi
+              doloremque sapiente, dolore minima Lorem ipsum dolor sit amet.
+            </p>
+            <h3 class="testimonial__name">Chuck McGrill</h3>
+            <h4 class="testimonial__date">2 weeks ago</h4>
+          </article>
+
+          <article class="testimonial">
+            <img
+              src="img/testimonials/testimonial4.jpg"
+              alt="A profile picture"
+              class="testimonial__img"
+              loading="lazy"
+            />
+            <p class="testimonial__text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet
+              quidem vero tempore sequi laboriosam. Lorem ipsum dolor sit amet
+              consectetur adipisicing.
+            </p>
+            <h3 class="testimonial__name">Kim Whaxler</h3>
+            <h4 class="testimonial__date">1 month ago</h4>
+          </article>
+        </article>
+      </article>
+
+      <!------------ MEMBER CARDS AND CARD POPUPS ------------->
+
+      <article class="cards">
+        <!----------BASIC MEMBERS CARD--------->
+
+        <article class="cards__header">
+          <svg class="cards__icon icon--light">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h2 class="cards__heading heading--light">
+            Exclusive for our members
+          </h2>
+          <svg class="cards__icon icon--light icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="cards__container">
+          <article class="card">
+            <h3 class="card__heading">basic</h3>
+            <svg class="card__icon--logo icon--dark">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+
+            <article class="card__details">
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Monthly newsletter</p>
+              </article>
+
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Free recipes</p>
+              </article>
+
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">One time discount</p>
+              </article>
+            </article>
+
+            <h3 class="card__price">
+              <span class="card__cost">Free</span>&nbsp;
+            </h3>
+
+            <button class="card__btn btn--gold" data-tab="1">
+              Find out more
+            </button>
+          </article>
+
+          <!-----------BASIC MEMBERSHIP POPUP---------->
+
+          <article class="card-popup card-popup--1">
+            <article class="card-popup__container">
+              <button class="card-popup__btn--close" data-tab="1">
+                <p>X</p>
+              </button>
+              <article class="card-popup__content--left">
+                <img
+                  src="img/cards/basic1-lg.jpg"
+                  srcset="
+                    img/cards/basic1-lg.jpg 585w,
+                    img/cards/basic1-md.jpg 390w,
+                    img/cards/basic1-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="Some chocolate"
+                  class="card-popup__img"
+                />
+                <img
+                  src="img/cards/basic2-lg.jpg"
+                  srcset="
+                    img/cards/basic2-lg.jpg 585w,
+                    img/cards/basic2-md.jpg 390w,
+                    img/cards/basic2-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="Some baking ingredients"
+                  class="card-popup__img"
+                />
+                <img
+                  src="img/cards/basic3-lg.jpg"
+                  srcset="
+                    img/cards/basic3-lg.jpg 585w,
+                    img/cards/basic3-md.jpg 390w,
+                    img/cards/basic3-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="A chocolate brownie"
+                  class="card-popup__img"
+                />
+              </article>
+
+              <article class="card-popup__content--right">
+                <article class="card-popup__header header--dark">
+                  <svg class="card-popup__icon icon--dark">
+                    <use href="img/icon-sprite.svg#cocoa"></use>
+                  </svg>
+                  <h1 class="card-popup__heading">Basic membership package</h1>
+                  <svg class="card-popup__icon icon--dark icon--right">
+                    <use href="img/icon-sprite.svg#cocoa"></use>
+                  </svg>
+                </article>
+
+                <p class="card-popup__text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Animi, numquam rem vero necessitatibus distinctio consequatur.
+                </p>
+
+                <p class="card-popup__text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Possimus perferendis sit voluptatem soluta ab.
+                </p>
+
+                <button class="card-popup__btn btn--gold">Sign up here</button>
+              </article>
+            </article>
+          </article>
+
+          <!-------------STANDARD MEMEBERSHIP CARD------------->
+
+          <article class="card card--highlighted">
+            <h3 class="card__heading card__heading--highlighted">standard</h3>
+            <svg class="card__icon--logo icon--highlighted">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+
+            <article class="card__details">
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Monthly newsletter</p>
+              </article>
+
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Monthly free tasters</p>
+              </article>
+
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Seasonal discounts</p>
+              </article>
+            </article>
+
+            <h3 class="card__price">
+              <span class="card__cost">$4.99</span>per month
+            </h3>
+
+            <button class="card__btn btn--brown" data-tab="2">
+              Find out more
+            </button>
+          </article>
+
+          <!----------- STANDARD MEMBERSHIP POPUP ----------->
+
+          <article class="card-popup card-popup--2">
+            <article class="card-popup__container">
+              <button class="card-popup__btn--close" data-tab="2">
+                <p>X</p>
+              </button>
+              <article class="card-popup__content--left">
+                <img
+                  src="img/cards/standard1-lg.jpg"
+                  srcset="
+                    img/cards/standard1-lg.jpg 585w,
+                    img/cards/standard1-md.jpg 390w,
+                    img/cards/standard1-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="A chocolate tart"
+                  class="card-popup__img"
+                />
+                <img
+                  src="img/cards/standard2-lg.jpg"
+                  srcset="
+                    img/cards/standard2-lg.jpg 585w,
+                    img/cards/standard2-md.jpg 390w,
+                    img/cards/standard2-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="Some cocoa beans"
+                  class="card-popup__img"
+                />
+                <img
+                  src="img/cards/standard3-lg.jpg"
+                  srcset="
+                    img/cards/standard3-lg.jpg 585w,
+                    img/cards/standard3-md.jpg 390w,
+                    img/cards/standard3-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="Some chocolate brownies"
+                  class="card-popup__img"
+                />
+              </article>
+
+              <article class="card-popup__content--right">
+                <article class="card-popup__header header--dark">
+                  <svg class="card-popup__icon icon--dark">
+                    <use href="img/icon-sprite.svg#cocoa"></use>
+                  </svg>
+                  <h1 class="card-popup__heading">
+                    standard membership package
+                  </h1>
+                  <svg class="card-popup__icon icon--dark icon--right">
+                    <use href="img/icon-sprite.svg#cocoa"></use>
+                  </svg>
+                </article>
+                <p class="card-popup__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Nulla commodi ducimus autem.
+                </p>
+
+                <p class="card-popup__text">
+                  Laudantium, voluptatum totam repellat cupiditate aliquid
+                  reprehenderit blanditiis.
+                </p>
+
+                <button class="card-popup__btn btn--gold">Sign up here</button>
+              </article>
+            </article>
+          </article>
+
+          <!------------ PREMIUM MEMBERSHIP CARD ------------->
+
+          <article class="card">
+            <h3 class="card__heading">premium</h3>
+            <svg class="card__icon--logo icon--dark">
+              <use href="img/icon-sprite.svg#cocoa"></use>
+            </svg>
+
+            <article class="card__details">
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Monthly newsletter</p>
+              </article>
+
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">Personalised gifts</p>
+              </article>
+
+              <article class="card__detail">
+                <svg class="card__icon icon--dark">
+                  <use href="img/icon-sprite.svg#check"></use>
+                </svg>
+                <p class="card__text">All-year discounts</p>
+              </article>
+            </article>
+
+            <h3 class="card__price">
+              <span class="card__cost">$14.99</span>per month
+            </h3>
+
+            <button class="card__btn btn--gold" data-tab="3">
+              Find out more
+            </button>
+          </article>
+
+          <!-------------- PREMIUM MEMBERSHIP POPUP-------------->
+
+          <article class="card-popup card-popup--3">
+            <article class="card-popup__container">
+              <button class="card-popup__btn--close" data-tab="3">
+                <p>X</p>
+              </button>
+              <article class="card-popup__content--left">
+                <img
+                  src="img/cards/premium1-lg.jpg"
+                  srcset="
+                    img/cards/premium1-lg.jpg 585w,
+                    img/cards/premium1-md.jpg 390w,
+                    img/cards/premium1-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="Some chocolate cakes"
+                  class="card-popup__img"
+                />
+                <img
+                  src="img/cards/premium2-lg.jpg"
+                  srcset="
+                    img/cards/premium2-lg.jpg 585w,
+                    img/cards/premium2-md.jpg 390w,
+                    img/cards/premium2-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="A chocolate macaron"
+                  class="card-popup__img"
+                />
+                <img
+                  src="img/cards/premium3-lg.jpg"
+                  srcset="
+                    img/cards/premium3-lg.jpg 585w,
+                    img/cards/premium3-md.jpg 390w,
+                    img/cards/premium3-sm.jpg 260w
+                  "
+                  sizes="(min-width: 600px) 585px, (min-width: 400) 390px, 260px"
+                  alt="A selection of chocolates"
+                  class="card-popup__img"
+                />
+              </article>
+
+              <article class="card-popup__content--right">
+                <article class="card-popup__header header--dark">
+                  <svg class="card-popup__icon icon--dark">
+                    <use href="img/icon-sprite.svg#cocoa"></use>
+                  </svg>
+                  <h1 class="card-popup__heading">
+                    premium membership package
+                  </h1>
+                  <svg class="card-popup__icon icon--dark icon--right">
+                    <use href="img/icon-sprite.svg#cocoa"></use>
+                  </svg>
+                </article>
+                <p class="card-popup__text">
+                  Ut facilis natus odio molestias voluptatem quibusdam omnis
+                  minima modi.
+                </p>
+
+                <p class="card-popup__text">
+                  Lorem iusto facere omnis? Laudantium quia temporibus magni
+                  deserunt magnam.
+                </p>
+
+                <button class="card-popup__btn btn--gold">Sign up here</button>
+              </article>
+            </article>
+          </article>
+        </article>
+      </article>
+
+      <!------------ CALL TO ACTION SIGN UP SECTION ------------->
+
+      <article class="cta">
+        <article class="cta__header">
+          <svg class="cta__icon icon--dark">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+          <h1 class="cta__heading heading--dark">Sign up now</h1>
+          <svg class="cta__icon icon--dark icon--right">
+            <use href="img/icon-sprite.svg#cocoa"></use>
+          </svg>
+        </article>
+
+        <article class="cta__container">
+          <article class="cta-form">
+            <h2 class="cta-form__heading">join now for gourmet chocolate</h2>
+
+            <form class="cta-form__items">
+              <article class="cta-form__group">
+                <input
+                  id="email"
+                  type="email"
+                  class="cta-form__input"
+                  placeholder="Your email address"
+                  required
+                />
+                <label for="email" class="cta-form__label"></label>
+              </article>
+
+              <article class="cta-form__group">
+                <input
+                  id="password"
+                  type="password"
+                  class="cta-form__input"
+                  placeholder="Enter a password"
+                  required
+                />
+                <label for="password" class="cta-form__label"></label>
+              </article>
+
+              <article class="cta-form__group-radio">
+                <article class="cta-form__radio-group">
+                  <input
+                    type="radio"
+                    class="cta-form__radio-input"
+                    id="basic"
+                    name="membership"
+                  />
+                  <label for="basic" class="cta-form__radio-label">
+                    <span class="cta-form__radio-btn"></span>
+                    basic membership
+                  </label>
+                </article>
+
+                <article class="cta-form__radio-group">
+                  <input
+                    type="radio"
+                    class="cta-form__radio-input"
+                    id="standard"
+                    name="membership"
+                  />
+                  <label for="standard" class="cta-form__radio-label">
+                    <span class="cta-form__radio-btn"></span>
+                    standard membership
+                  </label>
+                </article>
+
+                <article class="cta-form__radio-group">
+                  <input
+                    type="radio"
+                    class="cta-form__radio-input"
+                    id="premium"
+                    name="membership"
+                  />
+                  <label for="premium" class="cta-form__radio-label">
+                    <span class="cta-form__radio-btn"></span>
+                    premium membership
+                  </label>
+                </article>
+              </article>
+
+              <button class="cta-form__btn">sign up here</button>
+            </form>
+          </article>
+        </article>
+      </article>
+    </main>
+
+    <footer class="footer">
+      <article class="footer__header header--light">
+        <svg class="footer__icon icon--light">
+          <use href="img/icon-sprite.svg#cocoa"></use>
+        </svg>
+        <h1 class="footer__heading heading--light">GOURCHOC</h1>
+        <svg class="footer__icon icon--light icon--right">
+          <use href="img/icon-sprite.svg#cocoa"></use>
+        </svg>
+      </article>
+
+      <article class="footer__container">
+        <article class="footer__content">
+          <article class="footer__col">
+            <a class="footer__category">About us</a>
+            <a class="footer__link">Privacy policy</a>
+            <a class="footer__link">Terms of use</a>
+            <a class="footer__link">Our company</a>
+          </article>
+
+          <article class="footer__col">
+            <a class="footer__category">Contact</a>
+            <a class="footer__link">Customer service</a>
+            <a class="footer__link">Email us</a>
+          </article>
+
+          <article class="footer__col">
+            <a class="footer__category">Connect</a>
+            <a class="footer__link">
+              <svg class="footer__icon--logo icon--light">
+                <use href="img/social-media-sprite.svg#instagram"></use>
+              </svg>
+              Instagram
+            </a>
+
+            <a class="footer__link">
+              <svg class="footer__icon--logo icon--light">
+                <use href="img/social-media-sprite.svg#facebook"></use>
+              </svg>
+              Facebook
+            </a>
+
+            <a class="footer__link">
+              <svg class="footer__icon--logo icon--light">
+                <use href="img/social-media-sprite.svg#youtube"></use>
+              </svg>
+              YouTube
+            </a>
+          </article>
+        </article>
+
+        <article class="footer__copyright">
+          <p class="footer__copyright-text">
+            Copyright &copy; by Duncan Bounds. You are 100% allowed to use this
+            webpage for both personal and commercial use, but NOT to claim it as
+            your own design. A credit to the original author, Duncan Bounds, is
+            of course highly appreciated.
+          </p>
+        </article>
+      </article>
+    </footer>
+  </body>
+</html>
